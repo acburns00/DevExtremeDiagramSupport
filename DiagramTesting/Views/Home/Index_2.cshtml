@@ -1,0 +1,348 @@
+@(Html.DevExtreme().Diagram()
+    .ID("diagram")
+    .SimpleView(true)
+    .OnItemDblClick("onItemDblClick")
+    .OnRequestEditOperation("onRequestEditOperation")
+    .OnRequestLayoutUpdate("onRequestLayoutUpdate")
+    .CustomShapes(cs =>
+    {
+        cs.Add()
+            .Category("TouchPoint")
+            .Type("start")
+            .Title("Start")
+            .BaseType("terminator")
+            .DefaultWidth(1.5)
+            .DefaultHeight(0.75)
+            .DefaultText("START")
+            .AllowEditText(false)
+            .AllowResize(false)
+            .AllowEditImage(false)
+            .TextLeft(0)
+            .TextTop(0.7)
+            .TextWidth(1)
+            .TextHeight(0.3)
+            .ConnectionPoints(cp =>
+            {
+                //cp.Add().X(0.5).Y(0);
+                //cp.Add().X(0.9).Y(0.5);
+                cp.Add().X(0.5).Y(1);
+                //cp.Add().X(0.1).Y(0.5);
+            });
+        cs.Add()
+            .Category("TouchPoint")
+            .Type("touch")
+            .Title("Touch")
+            .BackgroundImageUrl(Url.Content("~/Content/Images/target-and-arrow-svgrepo-com.svg"))
+            .BackgroundImageLeft(0.15)
+            .BackgroundImageTop(0)
+            .BackgroundImageWidth(0.7)
+            .BackgroundImageHeight(0.7)
+            .DefaultWidth(0.85)
+            .DefaultHeight(0.85)
+            .DefaultText("TOUCH")
+            .AllowEditText(false)
+            .AllowResize(false)
+            .AllowEditImage(false)
+            .TextLeft(0)
+            .TextTop(0.7)
+            .TextWidth(1)
+            .TextHeight(0.3)
+            .Template(@<text>
+                <svg class="touch-template">
+                    <text class="touch-status" x="96%" y="10%">&#10003</text>
+                </svg>
+            </text>)
+            .ConnectionPoints(cp =>
+            {
+                cp.Add().X(0.5).Y(0);
+                cp.Add().X(0.9).Y(0.5);
+                cp.Add().X(0.5).Y(1);
+                cp.Add().X(0.1).Y(0.5);
+            });
+        cs.Add()
+            .Category("TouchPoint")
+            .Type("branch")
+            .Title("Branch")
+            .BackgroundImageUrl(Url.Content("~/Content/Images/split-round-svgrepo-com.svg"))
+            .BackgroundImageLeft(0.15)
+            .BackgroundImageTop(0)
+            .BackgroundImageWidth(0.7)
+            .BackgroundImageHeight(0.7)
+            .DefaultWidth(0.85)
+            .DefaultHeight(0.85)
+            .DefaultText("BRANCH")
+            .AllowEditText(false)
+            .AllowResize(false)
+            .AllowEditImage(false)
+            .TextLeft(0)
+            .TextTop(0.7)
+            .TextWidth(1)
+            .TextHeight(0.3)
+            .ConnectionPoints(cp =>
+            {
+                cp.Add().X(0.5).Y(0);
+                cp.Add().X(0.9).Y(0.5);
+                cp.Add().X(0.5).Y(1);
+                cp.Add().X(0.1).Y(0.5);
+            });
+    })
+    .Nodes(ns => ns
+        /*.DataSource(d => d
+            .Array()
+            .Key("ID")
+            .Data(Model.Nodes)
+        )*/
+        .DataSource(new JS("nodesDataSource"))
+        .KeyExpr("ID")
+        .TextExpr("Name")
+        .TypeExpr("Type")
+        .ParentKeyExpr("ParentID")
+        .StyleExpr(new JS("itemStyleExpr"))
+        .TextStyleExpr(new JS("itemTextStyleExpr"))
+        .AutoLayout(al => al
+            .Type(DiagramDataLayoutType.Tree)
+        )
+    )
+    .Edges(eg => eg
+        /*.DataSource(ed => ed
+            .Array()
+            .Key("ID")
+            .Data(Model.Edges)
+        )*/
+        .DataSource(new JS("edgesDataSource"))
+        .KeyExpr("ID")
+        .TextExpr(new JS("edgeTextExpr"))
+        .LineTypeExpr(new JS("edgeTypeExpr"))
+        .StyleExpr(new JS("linkStyleExpr"))
+    )
+    .ContextToolbox( t => t
+        .ShapeIconsPerRow(2)
+        .Width(100)
+        .Shapes(new[] {"touch", "branch"})
+    )
+    .Toolbox(tb => tb
+        .Visibility(DiagramPanelVisibility.Visible)
+        .ShapeIconsPerRow(2)
+        .Groups(g =>
+        {
+            g.Add()
+                .Category("general")
+                .Title("General")
+                .DisplayMode(DiagramToolboxDisplayMode.Icons)
+                .Expanded(false);
+            g.Add()
+                .Category("TouchPoint")
+                .Title("TouchPoint")
+                .DisplayMode(DiagramToolboxDisplayMode.Icons)
+                .Expanded(false);
+            g.Add()
+                .Category("TouchPoint")
+                .Title("TouchPoint")
+                .Shapes(new[] { "touch", "branch" })
+                .Expanded(true);
+        })
+    )
+)
+@(Html.DevExtreme().Popup()
+    .ID("popup")
+    .Width(300)
+    .Height(280)
+    .ShowTitle(true)
+    .Title("Information")
+    .Visible(false)
+    .DragEnabled(false)
+    .HideOnOutsideClick(true)
+)
+
+<script type="text/javascript">
+    const nodes = [
+        {
+            id: 001,
+            text: 'Start',
+            type: 'start',
+        }];
+
+    const edges = [
+        {
+            id: 901,
+            fromId: '001',
+            toId: '002',
+            text: 'Test'
+        }];
+
+    const nodesDataSource = new DevExpress.data.DataSource({ key: "ID", data: nodes });
+    const edgesDataSource = new DevExpress.data.DataSource({ key: "ID", data: edges });
+
+    function showToast(text) {
+        DevExpress.ui.notify({
+            position: { at: "top", my: "top", of: "#diagram", offset: "0 4" },
+            message: text,
+            type: "warning",
+            delayTime: 2000
+        });
+    }
+
+    function onRequestLayoutUpdate(e) {
+        console.log(e.component.getItems());
+        //const nodesDataSource = e.component.getNodeDataSource();
+        //const edgesDataSource = e.component.getEdgeDataSource();
+
+        //console.log("Layout Update:");
+        /*console.log(e);
+        console.log(e.changes[0].type);
+        console.log(e.changes[0].data.Type);*/
+        if (e.changes[0].type === 'insert' && e.changes[0].data.Type === 'branch') {/*
+                console.log("Pre-Insert Items");
+                console.log(e.component.getItems());
+
+                nodesDataSource.store().insert({Name:'touch_1',Type:'touch'}).then(() => {
+                    nodesDataSource.reload();
+                });
+
+                console.log("Post-Insert Items");
+                console.log(e.component.getItems());
+
+                edgesDataSource.store().insert({ FromID:1, ToID:2}).then(() => {
+                    edgesDataSource.reload();
+                });*/
+            nodesDataSource.store().insert({ Name: 'touch_1', Type: 'touch' }).then(() => {
+                nodesDataSource.reload().then(() => {
+                    edgesDataSource.store().insert({ Name: 'touch_1', Type: 'touch' }).then(() => {
+                        edgesDataSource.reload();
+                    })
+                });
+            });
+            console.log(e.component.getItems());
+        }
+        else
+            console.log(null);
+
+        for (var i = 0; i < e.changes.length; i++) {
+            if (e.changes[i].type === 'remove')
+                e.allowed = true;
+            else if (e.changes[i].data.ParentID !== undefined && e.changes[i].data.ParentID !== null)
+                e.allowed = true;
+        }
+    }
+
+    function itemStyleExpr(obj) {
+        if (obj.Type === "start")
+            return { "fill": "#304967" };
+        else
+            if (obj.Type === "branch")
+                return { "fill": "#ffcfc3" };
+            else
+                return { "fill": "#bbefcb" };
+    }
+
+    function itemTextStyleExpr(obj) {
+        //console.log("ITEM:");
+        //console.log(obj);
+        if (obj.Type === "start")
+            return { "font-weight": "bold", "text-decoration": "underline", "fill": "#ffffff" };
+    }
+
+    function edgeTextExpr(obj) {
+        console.log("EDGE:");
+        console.log(obj);
+        return { 0.7: "<a href='url'>link text</a>" };
+    }
+
+    function edgeTypeExpr() { return "orthogonal"; }
+
+    function linkStyleExpr() {
+        return { "stroke": "#304967" };
+    }
+
+    function onItemDblClick(obj) {
+        //console.log("onItemDblClick:");
+        //console.log(obj);
+        //console.log(obj.item);
+        //console.log(obj.item.itemType);
+        console.log(obj.component.getItems());
+        obj.item.add
+        var popup = $("#popup").dxPopup("instance");
+        if (obj.item.itemType === "shape") {
+            popup.option("contentTemplate", function () {
+                return $("<div/>").append("<p><b>Some SHAPE details.</b></p>")
+            });
+        }
+        else if (obj.item.itemType === "connector") {
+            popup.option("contentTemplate", function () {
+                return $("<div/>").append("<p><b>Some CONNECTOR details.</b></p>")
+            });
+        }
+        popup.show();
+    }
+
+    function onRequestEditOperation(e) {
+        //console.log("onRequestEditOperation:");
+        //console.log(e);
+        var diagram = $("#diagram").dxDiagram("instance");
+        if (e.operation === "addShape") {
+            if (e.args.shape.type !== "touch" && e.args.shape.type !== "branch") {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("You can add only a 'Touch' or 'Branch' shape.");
+                e.allowed = false;
+            }
+        }
+        else if (e.operation === "deleteShape") {
+            if (e.args.shape.type === "start") {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("You cannot delete the 'Start' shape.");
+                e.allowed = false;
+            }
+            else {
+                for (var i = 0; i < e.args.shape.attachedConnectorIds.length; i++) {
+                    if (diagram.getItemById(e.args.shape.attachedConnectorIds[i]).toId != e.args.shape.id) {
+                        if (e.reason !== "checkUIElementAvailability")
+                            showToast("You cannot delete an action that has a child steps.");
+                        e.allowed = false;
+                        break;
+                    }
+                }
+            }
+        }
+        else if (e.operation === "resizeShape") {
+            if (e.args.newSize.width < 0.85 || e.args.newSize.height < 0.85) {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("The shape size is too small.");
+                e.allowed = false;
+            }
+        }
+        else if (e.operation === "changeConnection") {
+            var shapeType = e.args.newShape && e.args.newShape.type;
+            if (shapeType === "start" && e.args.connectorPosition === "end") {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("The 'Start' shape cannot have an incoming connection.");
+                e.allowed = false;
+            }
+            /*if (shapeType === "touch" && e.args.connectorPosition === "start")
+                e.allowed = false;*/
+        }
+        else if (e.operation === "changeConnectorPoints") {
+            if (e.args.newPoints.length > 2) {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("You cannot add points to a connector.");
+                e.allowed = false;
+            }
+        }
+        else if (e.operation === "beforeChangeShapeText") {
+            if (e.args.shape.type === "start") {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("You cannot change the 'Start' shape's text.");
+                e.allowed = false;
+            }
+        }
+        else if (e.operation === "changeShapeText") {
+            if (e.args.text === "") {
+                if (e.reason !== "checkUIElementAvailability")
+                    showToast("A shape text cannot be empty.");
+                e.allowed = false;
+            }
+        }
+        else if (e.operation === "beforeChangeConnectorText") {
+            e.allowed = false;
+        }
+    }
+</script>
