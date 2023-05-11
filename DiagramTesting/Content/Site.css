@@ -1,0 +1,15 @@
+body {
+}
+
+#diagram {
+    height: 750px;
+}
+
+#diagram .touch-template .touch-status {
+    font-weight: bold;
+    fill: darkgreen;
+}
+
+.dx-popup-content p {
+    margin: 0 0 10px;
+}
