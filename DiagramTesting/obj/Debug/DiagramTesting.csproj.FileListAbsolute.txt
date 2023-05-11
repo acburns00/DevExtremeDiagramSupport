@@ -1,0 +1,76 @@
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DiagramTesting.dll.config
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DiagramTesting.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DiagramTesting.pdb
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\Antlr3.Runtime.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DevExtreme.AspNet.Data.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DevExtreme.AspNet.Mvc.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\Newtonsoft.Json.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Net.Http.Formatting.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Helpers.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Http.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Http.WebHost.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Mvc.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Optimization.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Razor.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.WebPages.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.WebPages.Razor.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\WebGrease.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\Antlr3.Runtime.pdb
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DevExtreme.AspNet.Data.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\DevExtreme.AspNet.Mvc.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\Newtonsoft.Json.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Net.Http.Formatting.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Helpers.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Http.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Http.WebHost.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Mvc.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Optimization.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.Razor.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.WebPages.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\bin\System.Web.WebPages.Razor.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\obj\Debug\DiagramTesting.csproj.AssemblyReference.cache
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\obj\Debug\DiagramTesting.csproj.CoreCompileInputs.cache
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\obj\Debug\DiagramTesting.csproj.CopyComplete
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\obj\Debug\DiagramTesting.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting\DiagramTesting\obj\Debug\DiagramTesting.pdb
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DiagramTesting.dll.config
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DiagramTesting.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DiagramTesting.pdb
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\Antlr3.Runtime.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DevExtreme.AspNet.Data.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DevExtreme.AspNet.Mvc.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\Newtonsoft.Json.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Net.Http.Formatting.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Helpers.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Http.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Http.WebHost.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Mvc.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Optimization.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Razor.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.WebPages.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.WebPages.Razor.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\WebGrease.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\Antlr3.Runtime.pdb
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DevExtreme.AspNet.Data.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\DevExtreme.AspNet.Mvc.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\Newtonsoft.Json.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Net.Http.Formatting.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Helpers.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Http.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Http.WebHost.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Mvc.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Optimization.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.Razor.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.WebPages.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\bin\System.Web.WebPages.Razor.xml
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\obj\Debug\DiagramTesting.csproj.AssemblyReference.cache
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\obj\Debug\DiagramTesting.csproj.CoreCompileInputs.cache
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\obj\Debug\DiagramTesting.csproj.CopyComplete
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\obj\Debug\DiagramTesting.dll
+C:\Users\alexburns.dsi\source\repos\DiagramTesting - Copy\DiagramTesting\obj\Debug\DiagramTesting.pdb
